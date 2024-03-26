@@ -1,0 +1,29 @@
+{
+  "name": "testes-codigo-ci-cd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josemarioleite/testes-codigo-ci-cd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josemarioleite/testes-codigo-ci-cd/issues"
+  },
+  "homepage": "https://github.com/josemarioleite/testes-codigo-ci-cd#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0"
+  }
+}
