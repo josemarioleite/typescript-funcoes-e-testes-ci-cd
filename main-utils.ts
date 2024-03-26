@@ -77,3 +77,24 @@ export function faixaEntre(inicio: number, fim: number): number[] {
   return Array.from({ length: tamanho }, (_, index) => inicio + index)
 }
 
+export enum StatusHTTP {
+  OK = 200,
+  NaoAutorizado = 401,
+  Proibido = 403,
+  NaoEncontrado = 404,
+}
+
+export function tratarRespostaHTTP(status: StatusHTTP, dados: any): any {
+  switch (status) {
+    case StatusHTTP.OK:
+      return { sucesso: true, dados }
+    case StatusHTTP.NaoAutorizado:
+      return { sucesso: false, erro: 'Não autorizado' }
+    case StatusHTTP.Proibido:
+      return { sucesso: false, erro: 'Acesso proibido' }
+    case StatusHTTP.NaoEncontrado:
+      return { sucesso: false, erro: 'Recurso não encontrado' }
+    default:
+      throw new Error('Status HTTP desconhecido')
+  }
+}
